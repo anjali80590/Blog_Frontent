@@ -1,0 +1,139 @@
+.page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.new-blog-form {
+  background: #f7f7f7;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+.new-blog-form h2 {
+  color: #3fa6b1;
+  word-spacing: 7px;
+  text-align: center;
+}
+
+.new-blog-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-blog-form input,
+.new-blog-form textarea {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  resize: none;
+  color: #333;
+}
+
+.new-blog-form textarea {
+  height: 80px;
+}
+
+.new-blog-form input::placeholder,
+.new-blog-form textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.submit-button-blog,
+.cancel-button-blog {
+  flex: 1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.submit-button-blog {
+  background-color: #3fa6b1;
+}
+
+.submit-button-blog:hover {
+  background-color: #16a085;
+}
+
+.cancel-button-blog {
+  background-color: #d9534f;
+}
+
+.cancel-button-blog:hover {
+  background-color: #c9302c;
+}
+
+@media (max-width: 768px) {
+  .new-blog-form {
+    padding: 15px 20px;
+    width: 95%;
+    max-width: 400px;
+  }
+
+  .new-blog-form h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .new-blog-form input,
+  .new-blog-form textarea {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .new-blog-form textarea {
+    height: 70px;
+  }
+
+  .error {
+    font-size: 0.8rem;
+  }
+
+  .form-actions {
+    gap: 10px;
+  }
+
+  .submit-button-blog,
+  .cancel-button-blog {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

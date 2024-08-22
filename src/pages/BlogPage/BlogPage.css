@@ -1,0 +1,45 @@
+.main-blog-page {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  width: 12vw;
+  background: #eee;
+  height: 100vh;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+.sidebar-blog {
+  background-color: #eee;
+}
+
+.content-blog {
+  width: 87vw;
+  background-color: #e0e0e0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (max-width: 750px) {
+  .blog-page {
+    flex-direction: column;
+  }
+
+  .content-blog {
+    width: 100vw;
+    padding: 0;
+    margin-left: 0;
+    border-left: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,152 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo,
+.auth-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  transition: background-color 0.5s ease-in-out;
+  background-color: #bc382e;
+}
+
+.content {
+  color: white;
+  z-index: 2;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.create-blog-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.background-image {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 800px;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.create-blog-button {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #ff8000;
+  white-space: nowrap;
+}
+
+.create-blog-button:hover {
+  background-color: #e68b30;
+}
+
+@media (max-width: 768px) {
+  .create-blog-button {
+    width: auto;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  .home-container {
+    justify-content: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+  }
+
+  .background-image {
+    display: none;
+  }
+  .content {
+    top: 25%;
+    width: 70%;
+  }
+}
+.audience-section {
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  background-color: #426d80;
+  color: #ffffff;
+}
+
+.audience-text {
+  flex: 1;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.audience-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.audience-image img {
+  max-width: 100%;
+  height: auto;
+}
+.small-text {
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .audience-section {
+    flex-direction: column;
+    text-align: center;
+    height: 80vh;
+  }
+
+  .audience-text {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .audience-image {
+    order: 2;
+  }
+}
